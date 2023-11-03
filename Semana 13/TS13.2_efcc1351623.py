@@ -19,14 +19,16 @@ class Circulo():
 num_circulos = int(input("Ingrese la cantidad de circulos: "))
 circulos = []
 for i in range(num_circulos):
-    radio = float(input("Ingrese el radio de cada circulo: "))
+    radio = float(input(f"Ingrese el radio de cada circulo {i+1}: "))
     el_circulo = Circulo(radio)
     circulos.append(el_circulo)
+#calcula y muestra los resultados de cada circulo
 for i, el_circulo in enumerate(circulos):
     perimetro = el_circulo.ObtenerPerimetro()
     area = el_circulo.ObtenerArea()
     volumen = el_circulo.ObtenerVolumen()
 
-print(f"Perimetro de la circunferencia: {perimetro}")
-print(f"Area de la circunferencia: {area}")
-print(f"Volumen de la esfera: {volumen}")
+    print(f"Resultado del circulo {i+1}: ")
+    print(f"Perimetro de la circunferencia: {perimetro}")
+    print(f"Area de la circunferencia: {area}")
+    print(f"Volumen de la esfera: {volumen}")
